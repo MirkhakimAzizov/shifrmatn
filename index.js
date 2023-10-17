@@ -56,8 +56,14 @@ elBtn.addEventListener("click", (e)=>{
         arrShifr = shifrSort(value,keyOne);
         placeIn = place(keyOne, valRectangle);
         // console.log(placeIn);
-        arrShifr2 = funSort(placeIn,arrShifr);
-        shifr2(arrShifr2, keyOneLength);
+        // arrShifr2 = funSort(placeIn,arrShifr);
+        let result = funSort(placeIn,arrShifr);
+        console.log(result);
+        // let result = shifr2(arrShifr2, keyOneLength);
+        elResult.innerHTML = `
+       <strong>Shifrlangan matn: </strong> ${result.join("")}
+       `;
+       alert.style.display = "block";
     } else if(changeVal == 3){
     //    console.log(changeVal);
        let valShifr = place(value);
@@ -138,13 +144,23 @@ function funSort(a,b){
         arrSort.push(arr);
     }
     arrSort.sort(function(a,b){return a[0]-b[0]});
-    console.log(arrSort);
     let sortedArr = [];
+    let arr = [];
+    console.log(arrSort);
+    for(let j=1; j<b.length/a.length+1; j++){
+        for(let i=0; i<a.length; i++){
+            arr.push(arrSort[i][j])
+        }
+    }
+    return arr;
+console.log(arr);
     for(let i=0; i<a.length; i++){
         for(let j=1; j<b.length/a.length+1; j++){
             sortedArr.push(arrSort[i][j]);
         }
     }
+    console.log(sortedArr);
+
     return sortedArr;
 };
 function shifr2(a,b){
@@ -157,6 +173,7 @@ function shifr2(a,b){
         arr.push(arr1);
     }
     console.log(arr);
+    return arr;
 };
 function shifr3(a,b){
     let arrIndex = [];
