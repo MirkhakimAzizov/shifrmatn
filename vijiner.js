@@ -25,12 +25,10 @@ const array = [
     "X",
     "Y",
     "Z",
-    ",",
-    " ",
-    ".",
-    "!",
-    "?",
     "'",
+    "_",
+    ".",
+    ","
   ];
   
   const formEl = document.querySelector(".form-el");
