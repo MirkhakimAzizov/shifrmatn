@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+  <title>Vijiner</title>
+  <link rel="stylesheet" href="./main.css" />
+</head>
+
+<body>
+  <div class="container mt-5 w-auto mx-auto ">
+    <form class="d-flex flex-column gap-3 form-el">
+      <label for="kalit" class="form-label w-50 mx-auto">Kalitni kiriting:
+        <input type="text" class="form-control mt-2" id="kalit" name="key" placeholder="kalit..." />
+      </label>
+      <button type="submit" class="btn btn-primary w-50 mx-auto">
+        Enter
+      </button>
+    </form>
+  </div> 
+  <div class="update visually-hidden ">
+    <a class='btn bg-success text-white fs-4 ' href='/'>Yangilash</a>
+  </div>
+  <table class="table table-bordered w-50 mx-auto mt-5 border bg-white visually-hidden ">
+    <thead class="table-head"></thead>
+    <tbody class="table-body"></tbody>
+  </table>
+  <div class="d-flex">
+    <form action="#" class="d-flex flex-column gap-3 mx-auto justify-content-center   w-auto form-text d-none mb-5">
+      <label for="text" class="textLabel form-label w-50 fw-bolder text-white">Ochiq matnni kiriting:
+        <input type="text" class="form-control mt-2 w-auto" id="text" name="text" placeholder="ochiq matn..." />
+      </label>
+      <button type="submit" class="btn btn-primary w-100 mx-auto">
+        Shifrlash
+      </button>
+    </form>
+    <form action="#" class="d-flex visually-hidden  flex-column gap-3 w-50 mx-auto form-decode d-none mb-5">
+      <label for="text" class="decodeLabel form-label w-50 mx-auto ">Shifrlangan matnni kiriting:
+        <input type="text" class="form-control mt-2" id="text" name="text" placeholder="shifrlangan matn..." />
+      </label>
+      <button type="submit" class="btn btn-primary w-50 mx-auto">
+        Deshifrlash
+      </button>
+    </form>
+  </div>
+  <div class="d-flex align-items-center flex-column justify-content-between ms-4 mb-5">
+    <div class="encrypted-text d-flex align-items-center w-75 mx-auto gap-0">
+      <p class="title-encrypted-text fs-5 fw-bold d-none">
+        Shifrlangan matn:
+      </p>
+    </div>
+    <div class="default-text d-flex align-items-center w-75 mx-auto gap-0">
+      <p class="title-default-text fs-5 fw-bold d-none">
+        Ochiq matn:  
+      </p>
+    </div>
+
+  </body>
+  <script src="./vijiner.js"></script>
+</html>
+
